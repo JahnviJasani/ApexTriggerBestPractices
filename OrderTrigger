@@ -1,0 +1,11 @@
+trigger OrderTrigger on Order (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
+    
+    //Create a custom setting for activating and deactivating the trigger from Production
+    //make an object of that custom setting and use here.
+    Trigger_Settings__c trgsetting = new Trigger_Settings__c(); 
+    trgsetting = Trigger_Settings__c.getValues('OrderTrigger');
+    
+    if(trgsetting.isActive__c){
+        new OrderTriggerHandler().run();
+    }
+}
