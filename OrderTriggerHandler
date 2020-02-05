@@ -1,0 +1,28 @@
+public class OrderTriggerHandler extends TriggerHandler{
+    public override void beforeInsert(){
+        //call your required action method here
+    }
+    public override void beforeUpdate(){
+        //call your required action method here
+    }
+    public override void beforeDelete(){
+        //call your required action method here
+    }
+    public override void afterInsert(){
+        //call your required action method here
+    }
+    public override void afterUpdate(){
+        //call your required action method here
+    }
+    public override void afterDelete(){
+        //call your required action method here
+    }
+    public override void afterUndelete(){
+        //call your required action method here
+    }
+    
+    //start creating your required action methods from here.
+    public static void doAction(){
+        //body
+    }
+}
